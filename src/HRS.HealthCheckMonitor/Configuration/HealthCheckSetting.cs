@@ -18,6 +18,6 @@
         /// <summary>
         /// Whether the health check should be monitored
         /// </summary>
-        public bool Monitor { get; set; }
+        public bool Monitor { get; set; } = true;
     }
 }

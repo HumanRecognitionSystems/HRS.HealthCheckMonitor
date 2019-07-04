@@ -7,7 +7,7 @@ namespace HRS.HealthCheckMonitor.Client
     /// <summary>
     /// Used for providing the health check options preffered for the HealthCheckMonitor
     /// </summary>
-    public static class MonitorClientOptions
+    public static class HealthCheckMonitorClientOptions
     {
         /// <summary>
         /// Gives the healthcheckoptions set for the HealthCheckMonitor
