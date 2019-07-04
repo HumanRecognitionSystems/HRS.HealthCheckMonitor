@@ -10,6 +10,8 @@
     <Copyright>Human Recognition Systems 2019</Copyright>
     <Authors>Human Recognition Systems Ltd</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/HumanRecognitionSystems/HRS.HealthCheckMonitor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HumanRecognitionSystems/HRS.HealthCheckMonitor.git</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
