@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Client part of HRS.HealthCheckMonitor</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>c#, HealthChecks, HealthCheckMonitor, Client</PackageTags>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+    <Copyright>Human Recognition Systems 2019</Copyright>
+    <Authors>Human Recognition Systems Ltd</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>HRS.HealthCheckMonitor.Client.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+</Project>

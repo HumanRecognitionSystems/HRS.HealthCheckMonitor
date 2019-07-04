@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HRS.HealthCheckMonitor</name>
+    </assembly>
+    <members>
+        <member name="T:HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions">
+            <summary>
+            The Health Check Monitor Options
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions.HealthChecks">
+            <summary>
+            The configured list of health checks
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions.EvaluationInterval">
+            <summary>
+            The interval between evaluating the health checks
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions.InitialEvalutionDelay">
+            <summary>
+            Initial Delay before the first evaluation of the health checks
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions.HealthCheckTimeout">
+            <summary>
+            Timeout on the healthchecks response
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions.HealthChecksDirectory">
+            <summary>
+            A directory that can contain additional health checks that may be added or removed from
+            </summary>
+            <remarks>
+            This is mainly for dynamic services that may not be running all the time
+            </remarks>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions.ApiEndpoint">
+            <summary>
+            The Api endpoint to use for returning result data
+            </summary>
+            <remarks>
+            You must add <see cref="M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.UseHealthCheckMonitorApi(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions})"/>
+            to your Startup.Configure
+            </remarks>
+        </member>
+        <member name="T:HRS.HealthCheckMonitor.Configuration.HealthCheckSetting">
+            <summary>
+            Individual health check settings
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckSetting.Name">
+            <summary>
+            The name to give to a health check
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckSetting.Uri">
+            <summary>
+            The uri of the health check
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckSetting.Monitor">
+            <summary>
+            Whether the health check should be monitored
+            </summary>
+        </member>
+        <member name="T:HRS.HealthCheckMonitor.Data.HealthMonitorData">
+            <summary>
+            The data stored by the monitor
+            </summary>
+        </member>
+        <member name="M:HRS.HealthCheckMonitor.Data.HealthMonitorData.AddUpdate(System.Collections.Generic.IEnumerable{HRS.HealthCheckMonitor.Configuration.HealthCheckSetting})">
+            <summary>
+            Add new health checks to the monitor
+            </summary>
+            <param name="settings">The settings for the healthchecks to add</param>
+        </member>
+        <member name="M:HRS.HealthCheckMonitor.Data.HealthMonitorData.Remove(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Remove health checks from the monitor
+            </summary>
+            <param name="settingNames">The names of the health checks to remove</param>
+        </member>
+        <member name="M:HRS.HealthCheckMonitor.Data.HealthMonitorData.HealthCheckNames">
+            <summary>
+            return the names of all the registered health checks
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HRS.HealthCheckMonitor.Data.HealthMonitorData.HealthCheckSetting(System.String)">
+            <summary>
+            Return the details of a health check
+            </summary>
+            <param name="name">The name of the health check to get</param>
+        </member>
+        <member name="M:HRS.HealthCheckMonitor.Data.HealthMonitorData.Result(System.String)">
+            <summary>
+            Get the results for a health check
+            </summary>
+            <param name="name">The name of the health check</param>
+        </member>
+        <member name="T:HRS.HealthCheckMonitor.Data.HealthMonitorResult">
+            <summary>
+            A result of a health check
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Data.HealthMonitorResult.Name">
+            <summary>
+            The name given to the health check
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Data.HealthMonitorResult.Status">
+            <summary>
+            The status of the health check
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Data.HealthMonitorResult.CurrentStatusCount">
+            <summary>
+            How many checks the result has been the current status
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Data.HealthMonitorResult.CurrentStatusStarted">
+            <summary>
+            When the result first became the current status
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Data.HealthMonitorResult.LastEvaluationDate">
+            <summary>
+            When the health check was last evaluated
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Data.HealthMonitorResult.EvaluationDuration">
+            <summary>
+            How long the healh check took
+            </summary>
+        </member>
+        <member name="P:HRS.HealthCheckMonitor.Data.HealthMonitorResult.Entries">
+            <summary>
+            The health check entries
+            </summary>
+        </member>
+        <member name="T:HRS.HealthCheckMonitor.Data.HealthMonitorStatus">
+            <summary>
+            The monitor status
+            </summary>
+            <remarks>
+            Same as health check status with additional settings NotChecked, and Offline
+            </remarks>
+        </member>
+        <member name="F:HRS.HealthCheckMonitor.Data.HealthMonitorStatus.NotChecked">
+            <summary>
+            The HealthCheck has not been evaluated yet
+            </summary>
+        </member>
+        <member name="F:HRS.HealthCheckMonitor.Data.HealthMonitorStatus.Offline">
+            <summary>
+            The HealthCheck is offline, usually failed to respond, or throw
+            an exception and is unable to the monitor
+            </summary>
+        </member>
+        <member name="F:HRS.HealthCheckMonitor.Data.HealthMonitorStatus.Unhealthy">
+            <summary>
+            The check returned Unhealthy
+            </summary>
+        </member>
+        <member name="F:HRS.HealthCheckMonitor.Data.HealthMonitorStatus.Degraded">
+            <summary>
+            The check returned Degraded
+            </summary>
+        </member>
+        <member name="F:HRS.HealthCheckMonitor.Data.HealthMonitorStatus.Healthy">
+            <summary>
+            The check returned Heathly
+            </summary>
+        </member>
+        <member name="T:HRS.HealthCheckMonitor.Services.HealthMonitorCallbacks">
+            <summary>
+            Used to add or remove callbacks to the monitor
+            </summary>
+        </member>
+        <member name="M:HRS.HealthCheckMonitor.Services.HealthMonitorCallbacks.AddCallback(System.String,HRS.HealthCheckMonitor.Data.HealthMonitorStatus,System.Func{HRS.HealthCheckMonitor.Data.HealthMonitorResult,System.Threading.Tasks.Task})">
+            <summary>
+            Add a callback for a health check
+            </summary>
+            <param name="healthCheckName">The name of the healthcheck</param>
+            <param name="status">The status the health check should be in</param>
+            <param name="callback">The callback</param>
+            <remarks>If no health check exists with the name, no error is thrown. The callback is just never called</remarks>
+        </member>
+        <member name="M:HRS.HealthCheckMonitor.Services.HealthMonitorCallbacks.RemoveCallback(System.String,HRS.HealthCheckMonitor.Data.HealthMonitorStatus)">
+            <summary>
+            Removes a callback for a healthcheck
+            </summary>
+            <param name="healthCheckName">The name of the healthcheck the callback is associated with</param>
+            <param name="status">The status the callback is for</param>
+            <remarks>If no health callback exists, no error is thrown</remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions">
+            <summary>
+            Extensions for Health Check Monitor
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.UseHealthCheckMonitorApi(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions})">
+            <summary>
+            Adds the Health check monitor api to your application
+            </summary>
+            <remarks>
+            This provides an easy and direct way to access the results as a json object in your javascript
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions">
+            <summary>
+            Adds health check monitor to an application
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddHealthCheckMonitor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the health check monitor to an application
+            </summary>
+            <remarks>
+            To make the health check monitor work at all add this to your starup ConfigureServices
+            </remarks>
+        </member>
+    </members>
+</doc>
