@@ -12,6 +12,7 @@
     <Authors>Human Recognition Systems Ltd</Authors>
     <PackageProjectUrl>https://github.com/HumanRecognitionSystems/HRS.HealthCheckMonitor</PackageProjectUrl>
     <RepositoryUrl>https://github.com/HumanRecognitionSystems/HRS.HealthCheckMonitor.git</RepositoryUrl>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
