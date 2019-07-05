@@ -13,5 +13,5 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build HRS.HealthCheckMonitor/src/HRS.HealthCheckMonitor.sln --configuration $(buildConfiguration)
+- script: dotnet build src/HRS.HealthCheckMonitor.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
