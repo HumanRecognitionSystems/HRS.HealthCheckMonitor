@@ -4,6 +4,8 @@ The health check monitor is a library for Monitor other applications health chec
 
 There is also a second library HealthCheckMonitor.Client to make setting up the client applications easier.
 
+[![Build Status](https://dev.azure.com/hrsid/HRS.HealthMonitor/_apis/build/status/HumanRecognitionSystems.HRS.HealthCheckMonitor?branchName=master)](https://dev.azure.com/hrsid/HRS.HealthMonitor/_build/latest?definitionId=2&branchName=master)
+
 ## Monitor Usage
 To use the health check monitor in your applcation use the ServiceCollection extension AddHealthCheckMonitor.
 
