@@ -1,4 +1,8 @@
-﻿namespace HRS.HealthCheckMonitor
+﻿using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("HRS.HealthCheckMonitor.UnitTests")]
+
+namespace HRS.HealthCheckMonitor
 {
     internal class Constants
     {

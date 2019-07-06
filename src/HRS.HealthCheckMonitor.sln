@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRS.HealthCheckMonitor", "HRS.HealthCheckMonitor\HRS.HealthCheckMonitor.csproj", "{42D397D7-3820-46E4-80AD-F0F870786C35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRS.HealthCheckMonitor.Client", "HRS.HealthCheckMonitor.Client\HRS.HealthCheckMonitor.Client.csproj", "{81EAEA52-3C4E-49C0-A8E1-2AFEFB44D63F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRS.HealthCheckMonitor.Client", "HRS.HealthCheckMonitor.Client\HRS.HealthCheckMonitor.Client.csproj", "{81EAEA52-3C4E-49C0-A8E1-2AFEFB44D63F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{592243CF-DEC2-458F-B02D-B907C991ED41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRS.HealthCheckMonitor.UnitTests", "tests\HRS.HealthCheckMonitor.UnitTests\HRS.HealthCheckMonitor.UnitTests.csproj", "{E1651FF5-7100-41B5-8881-19EEF1961096}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{81EAEA52-3C4E-49C0-A8E1-2AFEFB44D63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81EAEA52-3C4E-49C0-A8E1-2AFEFB44D63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81EAEA52-3C4E-49C0-A8E1-2AFEFB44D63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1651FF5-7100-41B5-8881-19EEF1961096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1651FF5-7100-41B5-8881-19EEF1961096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1651FF5-7100-41B5-8881-19EEF1961096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1651FF5-7100-41B5-8881-19EEF1961096}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E1651FF5-7100-41B5-8881-19EEF1961096} = {592243CF-DEC2-458F-B02D-B907C991ED41}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A077B480-273E-4C5B-A229-56152149E70C}
