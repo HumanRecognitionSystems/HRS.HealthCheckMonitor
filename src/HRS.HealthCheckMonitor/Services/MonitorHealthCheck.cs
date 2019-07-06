@@ -64,6 +64,11 @@ namespace HRS.HealthCheckMonitor.Services
 
         private async Task CheckContent(HttpContent content)
         {
+            if(content == null || content.Headers?.ContentType == null)
+            {
+                return;
+            }
+
             if(content.Headers.ContentType.MediaType == Constants.DEFAULT_RESPONSE_CONTENT_TYPE)
             {
                 try
