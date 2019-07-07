@@ -5,7 +5,8 @@
 var deps = {
     "jquery": { "dirs": { "dist": "" } },
     "bootstrap": { "dirs": { "dist": "" } },
-    "bootstrap-table": { "dirs": { "dist": "" } }
+    "bootstrap-table": { "dirs": { "dist": "" } },
+    "moment": { "dirs": { "min": "" } }
 };
 
 gulp.task("copyLibs", function () {

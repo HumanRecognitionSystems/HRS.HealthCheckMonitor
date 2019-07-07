@@ -6,13 +6,29 @@
 
 <form>
     <div class="form-row">
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label for="name">Name</label>
             <input type="text" readonly class="form-control" id="name" />
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label for="status">Status</label>
             <input type="text" readonly class="form-control" id="status" />
+        </div>
+        <div class="form-group col-md-2">
+            <label for="statusStarted">Status Started</label>
+            <input type="text" readonly class="form-control" id="statusStarted" />
+        </div>
+        <div class="form-group col-md-2">
+            <label for="count">Status Count</label>
+            <input type="text" readonly class="form-control" id="count" />
+        </div>
+        <div class="form-group col-md-2">
+            <label for="lastDate">Last Evaluation Date</label>
+            <input type="text" readonly class="form-control" id="lastDate" />
+        </div>
+        <div class="form-group col-md-2">
+            <label for="duration">Duration</label>
+            <input type="text" readonly class="form-control" id="duration" />
         </div>
     </div>
 </form>
@@ -23,6 +39,7 @@
             <th data-field="name">Name</th>
             <th data-field="status">Status</th>
             <th data-field="description">Description</th>
+            <th data-field="duration">Duration</th>
         </tr>
     </thead>
 </table>
