@@ -24,17 +24,21 @@ namespace HRS.HealthCheckMonitor.Data
             get => _monitorStatus;
             set
             {
-                LastEvaluationDate = DateTime.UtcNow;
-                if(_monitorStatus != value)
+                if(_monitorStatus == value)
                 {
-                    CurrentStatusCount = 1;
-                    _monitorStatus = value;
+                    if((DateTime.UtcNow - LastEvaluationDate).TotalMilliseconds < 5)
+                    {
+                        return;
+                    }
+                    CurrentStatusCount++;
                 }
                 else
                 {
-                    CurrentStatusCount++;
+                    CurrentStatusCount = 1;
                     CurrentStatusStarted = DateTime.UtcNow;
+                    _monitorStatus = value;
                 }
+                LastEvaluationDate = DateTime.UtcNow;
             }
         }
 
