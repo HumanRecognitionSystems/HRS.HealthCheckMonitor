@@ -1,5 +1,6 @@
 ﻿using HRS.HealthCheckMonitor.Configuration;
 using HRS.HealthCheckMonitor.Middleware;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace Microsoft.AspNetCore.Builder
@@ -15,9 +16,9 @@ namespace Microsoft.AspNetCore.Builder
         /// <remarks>
         /// This provides an easy and direct way to access the results as a json object in your javascript
         /// </remarks>
-        private static IApplicationBuilder UseHealthCheckMonitorApi(IApplicationBuilder app, Action<HealthCheckMonitorOptions> setup = null)
+        public static IApplicationBuilder UseHealthCheckMonitorApi(this IApplicationBuilder app, Action<HealthCheckMonitorOptions> setup = null)
         {
-            var opts = (HealthCheckMonitorOptions)app.ApplicationServices.GetService(typeof(HealthCheckMonitorOptions));
+            var opts = app.ApplicationServices.GetService<HealthCheckMonitorOptions>();
             setup?.Invoke(opts);
             if(string.IsNullOrWhiteSpace(opts.ApiEndpoint) || !opts.ApiEndpoint.StartsWith("/"))
             {

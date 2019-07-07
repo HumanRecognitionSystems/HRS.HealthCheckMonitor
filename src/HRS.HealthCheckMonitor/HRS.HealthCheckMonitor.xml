@@ -71,6 +71,12 @@
             The data stored by the monitor
             </summary>
         </member>
+        <member name="M:HRS.HealthCheckMonitor.Data.HealthMonitorData.#ctor(HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions)">
+            <summary>
+            Creates a new HealthMonitorData
+            </summary>
+            <param name="options">The options for the HealthMonitor</param>
+        </member>
         <member name="M:HRS.HealthCheckMonitor.Data.HealthMonitorData.AddUpdate(System.Collections.Generic.IEnumerable{HRS.HealthCheckMonitor.Configuration.HealthCheckSetting})">
             <summary>
             Add new health checks to the monitor
@@ -178,6 +184,11 @@
         <member name="T:HRS.HealthCheckMonitor.Services.HealthMonitorCallbacks">
             <summary>
             Used to add or remove callbacks to the monitor
+            </summary>
+        </member>
+        <member name="M:HRS.HealthCheckMonitor.Services.HealthMonitorCallbacks.#ctor(Microsoft.Extensions.Logging.ILogger{HRS.HealthCheckMonitor.Services.HealthMonitorCallbacks})">
+            <summary>
+            The consturctor for HealthMonitorCallbacks
             </summary>
         </member>
         <member name="M:HRS.HealthCheckMonitor.Services.HealthMonitorCallbacks.AddCallback(System.String,HRS.HealthCheckMonitor.Data.HealthMonitorStatus,System.Func{HRS.HealthCheckMonitor.Data.HealthMonitorResult,System.Threading.Tasks.Task})">

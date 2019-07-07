@@ -1,9 +1,7 @@
 ﻿using HRS.HealthCheckMonitor.Configuration;
-using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace HRS.HealthCheckMonitor.Data
 {
@@ -12,7 +10,11 @@ namespace HRS.HealthCheckMonitor.Data
     /// </summary>
     public class HealthMonitorData
     {
-        internal HealthMonitorData(HealthCheckMonitorOptions options)
+        /// <summary>
+        /// Creates a new HealthMonitorData
+        /// </summary>
+        /// <param name="options">The options for the HealthMonitor</param>
+        public HealthMonitorData(HealthCheckMonitorOptions options)
         {
             AddUpdate(options.HealthChecks);
         }

@@ -4,6 +4,16 @@
         <name>HRS.HealthCheckMonitor.Client</name>
     </assembly>
     <members>
+        <member name="T:HRS.HealthCheckMonitor.Client.HealthCheckMonitorClientOptions">
+            <summary>
+            Used for providing the health check options preffered for the HealthCheckMonitor
+            </summary>
+        </member>
+        <member name="M:HRS.HealthCheckMonitor.Client.HealthCheckMonitorClientOptions.HealthCheckOptions">
+            <summary>
+            Gives the healthcheckoptions set for the HealthCheckMonitor
+            </summary>
+        </member>
         <member name="T:HRS.HealthCheckMonitor.Client.HealthCheckMonitorWriter">
             <summary>
             Provides the health check reponse writer set up for full json
@@ -16,16 +26,6 @@
             <param name="httpContext">The context of the reponse</param>
             <param name="report">The report to write to the response</param>
             <returns></returns>
-        </member>
-        <member name="T:HRS.HealthCheckMonitor.Client.MonitorClientOptions">
-            <summary>
-            Used for providing the health check options preffered for the HealthCheckMonitor
-            </summary>
-        </member>
-        <member name="M:HRS.HealthCheckMonitor.Client.MonitorClientOptions.HealthCheckOptions">
-            <summary>
-            Gives the healthcheckoptions set for the HealthCheckMonitor
-            </summary>
         </member>
     </members>
 </doc>

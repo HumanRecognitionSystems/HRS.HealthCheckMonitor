@@ -15,7 +15,10 @@ namespace HRS.HealthCheckMonitor.Services
     {
         private readonly ILogger _logger;
 
-        internal HealthMonitorCallbacks(ILogger<HealthMonitorCallbacks> logger)
+        /// <summary>
+        /// The consturctor for HealthMonitorCallbacks
+        /// </summary>
+        public HealthMonitorCallbacks(ILogger<HealthMonitorCallbacks> logger)
         {
             _logger = logger;
         }

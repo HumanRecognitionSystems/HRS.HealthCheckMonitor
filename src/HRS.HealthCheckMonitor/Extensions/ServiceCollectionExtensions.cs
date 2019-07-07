@@ -1,10 +1,8 @@
 ﻿using HRS.HealthCheckMonitor;
 using HRS.HealthCheckMonitor.Configuration;
 using HRS.HealthCheckMonitor.Data;
+using HRS.HealthCheckMonitor.Services;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -26,7 +24,9 @@ namespace Microsoft.Extensions.DependencyInjection
             var options = configuration.GetSection(Constants.HEALTHMONITOR_SECTION_SETTING_KEY).Get<HealthCheckMonitorOptions>();
 
             services.AddSingleton(options)
-                .AddSingleton<HealthMonitorData>();
+                .AddSingleton<HealthMonitorData>()
+                .AddHostedService<MonitorCollectorService>()
+                .AddSingleton<HealthMonitorCallbacks>();
 
             services.AddHttpClient(Constants.HEALTHMONITOR_HTTP_CLIENT_NAME, client => { client.Timeout = options.HealthCheckTimeout; });
 
