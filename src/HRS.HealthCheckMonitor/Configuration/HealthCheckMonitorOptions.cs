@@ -22,7 +22,7 @@ namespace HRS.HealthCheckMonitor.Configuration
         /// <summary>
         /// Initial Delay before the first evaluation of the health checks
         /// </summary>
-        public TimeSpan InitialEvalutionDelay { get; set; } = TimeSpan.FromMinutes(2);
+        public TimeSpan InitialEvaluationDelay { get; set; } = TimeSpan.FromMinutes(2);
 
         /// <summary>
         /// Timeout on the healthchecks response

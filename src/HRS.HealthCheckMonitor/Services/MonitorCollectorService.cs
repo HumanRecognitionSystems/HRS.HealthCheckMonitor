@@ -19,7 +19,7 @@ namespace HRS.HealthCheckMonitor.Services
         private readonly ILogger _logger;
 
         public MonitorCollectorService(HealthCheckMonitorOptions options, HealthMonitorData data, HealthMonitorCallbacks callbacks, IHttpClientFactory clientFactory, ILogger<MonitorCollectorService> logger) 
-            : base(new HostedTimedOptions { InitialDelay = options.InitialEvalutionDelay, Interval = options.EvaluationInterval }, logger)
+            : base(new HostedTimedOptions { InitialDelay = options.InitialEvaluationDelay, Interval = options.EvaluationInterval }, logger)
         {
             _data = data;
             _callbacks = callbacks;

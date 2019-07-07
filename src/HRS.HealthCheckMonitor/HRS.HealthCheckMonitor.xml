@@ -19,7 +19,7 @@
             The interval between evaluating the health checks
             </summary>
         </member>
-        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions.InitialEvalutionDelay">
+        <member name="P:HRS.HealthCheckMonitor.Configuration.HealthCheckMonitorOptions.InitialEvaluationDelay">
             <summary>
             Initial Delay before the first evaluation of the health checks
             </summary>

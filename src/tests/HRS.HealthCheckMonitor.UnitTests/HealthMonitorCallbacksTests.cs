@@ -119,7 +119,7 @@ namespace HRS.HealthCheckMonitor.UnitTests
         {
             return new HealthCheckMonitorOptions
             {
-                InitialEvalutionDelay = TimeSpan.Zero,
+                InitialEvaluationDelay = TimeSpan.Zero,
                 EvaluationInterval = TimeSpan.FromHours(5),
                 HealthChecks = new List<HealthCheckSetting>
                 {

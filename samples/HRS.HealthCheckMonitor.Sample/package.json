@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "merge-stream": "2.0.0",
+    "gulp-rimraf": "0.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "bootstrap-table": "1.15.2",
+    "jquery": "3.4.1"
+  }
+}
