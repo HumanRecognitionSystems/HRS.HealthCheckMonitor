@@ -12,15 +12,20 @@
         </div>
         <div class="form-group col-md-2">
             <label for="status">Status</label>
-            <input type="text" readonly class="form-control" id="status" />
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i id="icon" class="fa fa-slash"></i></span>
+                </div>
+                <input type="text" readonly class="form-control" id="status" />
+            </div>
         </div>
         <div class="form-group col-md-2">
             <label for="statusStarted">Status Started</label>
             <input type="text" readonly class="form-control" id="statusStarted" />
         </div>
         <div class="form-group col-md-2">
-            <label for="count">Status Count</label>
-            <input type="text" readonly class="form-control" id="count" />
+            <label for="statusCount">Status Count</label>
+            <input type="text" readonly class="form-control" id="statusCount" />
         </div>
         <div class="form-group col-md-2">
             <label for="lastDate">Last Evaluation Date</label>
@@ -33,6 +38,7 @@
     </div>
 </form>
 
+<h3>Entries</h3>
 <table id="entries" class="table table-bordered table-striped">
     <thead class="thead-dark">
         <tr>
@@ -43,3 +49,25 @@
         </tr>
     </thead>
 </table>
+<hr />
+<h3>Change States</h3>
+<div class="row">
+    <div class="col-sm">
+        <h5>Health 1</h5>
+        <button data-checked="Health1/healthy" class="state btn btn-outline-success">Healthly</button>
+        <button data-checked="Health1/degraded" class="state btn btn-outline-warning">Degraded</button>
+        <button data-checked="Health1/unhealthy" class="state btn btn-outline-danger">Unhealthly</button>
+    </div>
+    <div class="col-sm">
+        <h5>Health 2</h5>
+        <button data-checked="Health2/healthy" class="state btn btn-outline-success">Healthly</button>
+        <button data-checked="Health2/degraded" class="state btn btn-outline-warning">Degraded</button>
+        <button data-checked="Health2/unhealthy" class="state btn btn-outline-danger">Unhealthly</button>
+    </div>
+    <div class="col-sm">
+        <h5>Health 3</h5>
+        <button data-checked="Health3/healthy" class="state btn btn-outline-success">Healthly</button>
+        <button data-checked="Health3/degraded" class="state btn btn-outline-warning">Degraded</button>
+        <button data-checked="Health3/unhealthy" class="state btn btn-outline-danger">Unhealthly</button>
+    </div>
+</div>

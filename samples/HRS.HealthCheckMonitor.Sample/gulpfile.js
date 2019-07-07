@@ -1,4 +1,5 @@
-﻿var gulp = require("gulp"),
+/// <binding BeforeBuild='copyLibs' Clean='cleanLibs' />
+var gulp = require("gulp"),
     merge = require("merge-stream"),
     rimraf = require("gulp-rimraf");
 
@@ -6,7 +7,11 @@ var deps = {
     "jquery": { "dirs": { "dist": "" } },
     "bootstrap": { "dirs": { "dist": "" } },
     "bootstrap-table": { "dirs": { "dist": "" } },
-    "moment": { "dirs": { "min": "" } }
+    "moment": { "dirs": { "min": "" } },
+    "@fortawesome/fontawesome-free": {
+        "name": "fontawesome",
+        "dirs": { "css": "css", "webfonts": "webfonts" }
+    }
 };
 
 gulp.task("copyLibs", function () {
