@@ -94,7 +94,7 @@ namespace HRS.HealthCheckMonitor.Services
             }
         }
 
-        public IEnumerable<HealthCheckSetting> LoadSettings(string path)
+        private IEnumerable<HealthCheckSetting> LoadSettings(string path)
         {
             var stringContent = File.ReadAllText(path);
             return JsonConvert.DeserializeObject<HealthCheckSetting[]>(stringContent);

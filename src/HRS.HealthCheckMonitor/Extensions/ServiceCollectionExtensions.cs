@@ -26,6 +26,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(options)
                 .AddSingleton<HealthMonitorData>()
                 .AddHostedService<MonitorCollectorService>()
+                .AddHostedService<MonitorDirectoryService>()
                 .AddSingleton<HealthMonitorCallbacks>();
 
             services.AddHttpClient(Constants.HEALTHMONITOR_HTTP_CLIENT_NAME, client => { client.Timeout = options.HealthCheckTimeout; });
