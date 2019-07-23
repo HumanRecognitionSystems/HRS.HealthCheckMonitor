@@ -13,7 +13,7 @@
     <PackageProjectUrl>https://github.com/HumanRecognitionSystems/HRS.HealthCheckMonitor</PackageProjectUrl>
     <RepositoryUrl>https://github.com/HumanRecognitionSystems/HRS.HealthCheckMonitor.git</RepositoryUrl>
     <LangVersion>latest</LangVersion>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
